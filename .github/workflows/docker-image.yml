@@ -27,4 +27,4 @@ jobs:
       with:
         context: ./internal-enrichment/virustotal/
         push: true
-        tags: sebascorrea/connector-virustotal:6.1.10-modificado
+        tags: sebascorrea/connector-virustotal:6.1.10-2
