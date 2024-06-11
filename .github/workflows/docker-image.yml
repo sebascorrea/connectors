@@ -25,5 +25,6 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
+        context: ./internal-enrichment/virustotal/
         push: true
         tags: sebascorrea/connectors/connector-virustotal:6.1.10-modificado
