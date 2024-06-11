@@ -204,11 +204,11 @@ class VirusTotalConnector:
 
         builder.create_indicator_based_on(
             self.file_indicator_config,
-            f"""[file:hashes.'SHA-256' = '{json_data["data"]["attributes"]["sha256"]}']""",
+            f"""[file:hashes.'SHA-256' = '{json_data['data']['attributes']['sha256']}']""",
             external_references=[{
                 "source_name": "VirusTotal",
                 "description": "VirusTotal reference for file",
-                "url": f"https://www.virustotal.com/gui/file/{json_data["data"]["attributes"]["sha256"]}"
+                "url": f"https://www.virustotal.com/gui/file/{json_data['data']['attributes']['sha256']}"
             }]
         )
 
@@ -263,7 +263,7 @@ class VirusTotalConnector:
             external_references=[{
                 "source_name": "VirusTotal",
                 "description": "VirusTotal reference for IP",
-                "url": f"https://www.virustotal.com/gui/ip-address/{opencti_entity["observable_value"]}"
+                "url": f"https://www.virustotal.com/gui/ip-address/{opencti_entity['observable_value']}"
             }]
         )
         builder.create_notes()
@@ -306,7 +306,7 @@ class VirusTotalConnector:
             external_references=[{
                 "source_name": "VirusTotal",
                 "description": "VirusTotal reference for domain",
-                "url": f"https://www.virustotal.com/gui/domain/{opencti_entity["observable_value"]}"
+                "url": f"https://www.virustotal.com/gui/domain/{opencti_entity['observable_value']}"
             }]
         )
         builder.create_notes()
@@ -355,12 +355,12 @@ class VirusTotalConnector:
         )
 
         builder.create_indicator_based_on(
-            self.ip_indicator_config,
+            self.url_indicator_config,
             f"""[url:value = '{opencti_entity["observable_value"]}']""",
             external_references=[{
                 "source_name": "VirusTotal",
                 "description": "VirusTotal reference for URL",
-                "url": f"https://www.virustotal.com/gui/url/{opencti_entity["observable_value"]}"
+                "url": f"https://www.virustotal.com/gui/url/{opencti_entity['observable_value']}"
             }]
         )
         builder.create_notes()
