@@ -26,4 +26,4 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: tu-usuario/connectors/connector-virustotal:6.1.10-modificado
+        tags: sebascorrea/connectors/connector-virustotal:6.1.10-modificado
